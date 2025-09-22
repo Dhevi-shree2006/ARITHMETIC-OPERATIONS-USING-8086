@@ -26,7 +26,6 @@ To write and execute Assembly Language Programs to perform arithmetic operations
 7. Store result.
 8. Stop.
 
-
 ## FLOW CHART
 <img width="707" height="1024" alt="image" src="https://github.com/user-attachments/assets/b5a7062d-e294-47cd-9683-a40de25e82de" />
 
@@ -126,7 +125,6 @@ END
 5. Store result.
 
 ## FLOWCHART
-
 <img width="578" height="797" alt="image" src="https://github.com/user-attachments/assets/564c3c7a-33ce-4a1c-8920-beb5c24b9b47" />
 
 ## DIRECT SUBTRACTION
