@@ -64,20 +64,19 @@ END
 | 1203                    |    34                    |
 | 1204                    |    24                    |
 | 1205                    |    68                    |
+
 #### Manual Calculations
 
-(Add your calculation here)
-![WhatsApp Image 2025-09-21 at 23 02 06_faca4408](https://github.com/user-attachments/assets/5e626d11-1c3f-435b-98b9-702dd727d54c)
-
-
----
+![WhatsApp Image 2025-09-22 at 09 15 15_796eb958](https://github.com/user-attachments/assets/d6e537f0-db1b-4cc0-b19b-a35b7a8608a5)
 
 ## OUTPUT IMAGE FROM MASM SOFTWARE
 <img width="650" height="336" alt="addScreenshot 2025-08-29 085255" src="https://github.com/user-attachments/assets/933db6b5-5f97-4b4e-a3d9-c52889296577" />
 
-##INDIRECT ADDITION
+---
 
-###PROGRAM
+**INDIRECT ADDITION**
+
+PROGRAM
 ```asm
 CODE SEGMENT
 ASSUME CS: CODE, DS:CODE
@@ -100,12 +99,13 @@ END
 
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
 | ----------------------- | ------------------------ |                      
-| 1200                    |    78                    |
-| 1201                    |    88                    |
-| 1202                    |    23                    |
-| 1203                    |    02                    |
-| 1204                    |    9C                    |
-| 1205                    |    8A                    |
+| 2000                    |    78                    |
+| 2001                    |    88                    |
+| 2002                    |    23                    |
+| 2003                    |    02                    |
+| 2004                    |    9C                    |
+| 2005                    |    8A                    |
+
 #### Manual Calculations
 
 <img width="686" height="525" alt="image" src="https://github.com/user-attachments/assets/a35a2421-4b4b-4505-90b1-8df14bdaa689" />
@@ -113,6 +113,7 @@ END
 ## OUTPUT IMAGE FROM MASM SOFTWARE
 <img width="621" height="425" alt="inaddScreenshot 2025-09-17 142922" src="https://github.com/user-attachments/assets/7fb9d97b-4c65-46b2-b4ea-3ea9504a439e" />
 
+---
 
 ## 2. SUBTRACTION
 
@@ -165,15 +166,14 @@ END
 
 #### Manual Calculations
 
-(Add your calculation here)
 <img width="930" height="408" alt="image" src="https://github.com/user-attachments/assets/6ca71e79-1e78-4b15-998d-df4de93f6213" />
 
 
----
-
-
 ## OUTPUT SCREEN FROM MASM SOFTWARE
+
 ![WhatsApp Image 2025-09-17 at 14 23 52_6f89e1bc](https://github.com/user-attachments/assets/efe5932a-d876-42cd-a40c-13ce09a0f76d)
+
+---
 
 ## INDIRECT SUBTRACTION
 
@@ -201,21 +201,22 @@ END
 
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
 | ----------------------- | ------------------------ |
-| 1200                    |    12                    |
-| 1201                    |    34                    |
-| 1202                    |    12                    |
-| 1203                    |    34                    |
-| 1204                    |    00                    |
-| 1205                    |    00                    |
+| 2000                    |    12                    |
+| 2001                    |    34                    |
+| 2002                    |    12                    |
+| 2003                    |    34                    |
+| 2004                    |    00                    |
+| 2005                    |    00                    |
+
 #### Manual Calculations
 
-(Add your calculation here)
 ![WhatsApp Image 2025-09-21 at 23 21 17_1182d2a4](https://github.com/user-attachments/assets/ccc516b8-e936-4c91-b892-fcb95e21cde4)
 
 
 ## OUTPUT IMAGE FROM MASM SOFTWARE
 <img width="640" height="427" alt="insubScreenshot 2025-09-12 084822" src="https://github.com/user-attachments/assets/ed2de494-43c7-4567-8730-2b6d522cdfcf" />
 
+---
 
 ## 3. MULTIPLICATION
 
@@ -230,7 +231,7 @@ END
 
 <img width="569" height="906" alt="image" src="https://github.com/user-attachments/assets/88be88ff-2896-4a88-b73d-84ccffd2fcf9" />
 
-
+### DIRECT MULTPLICATION
 
 #### Program
 
@@ -255,19 +256,66 @@ END
 
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
 | ----------------------- | ------------------------ |
-|                         |                          |
+| 1200                    |    12                    |
+| 1201                    |    34                    |
+| 1202                    |    12                    |
+| 1203                    |    34                    |
+| 1204                    |    09                    |
+| 1205                    |    5A                    |
 
 #### Manual Calculations
 
-(Add your calculation here)
 <img width="1151" height="626" alt="image" src="https://github.com/user-attachments/assets/9e1484b8-f847-4265-a7e8-6172f11671c0" />
 
+## OUTPUT SCREEN FROM MASM SOFTWARE
+
+<img width="637" height="424" alt="mulScreenshot 2025-09-17 142337" src="https://github.com/user-attachments/assets/07386bb7-fd91-4fa1-92a0-c530bdd984ae" />
 
 ---
 
-## OUTPUT SCREEN FROM MASM SOFTWARE
-<img width="637" height="424" alt="mulScreenshot 2025-09-17 142337" src="https://github.com/user-attachments/assets/07386bb7-fd91-4fa1-92a0-c530bdd984ae" />
+### INDIRECT MULTIPLICATION
 
+## PROGRAM
+```
+CODE SEGMENT
+ASSUME CS: CODE,DS:CODE
+ORG 1000H
+MOV SI,2000H
+MOV DX,0000H
+MOV AX,[SI]
+MOV BX,[SI+02H]
+MUL BX
+MOV [SI+04H],AX
+MOV [SI+06H],DX
+MOV AH,4CH
+INT 21H
+CODE ENDS
+END
+
+```
+#### Output Table
+
+| MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
+| ----------------------- | ------------------------ |
+| 2000                    |    12                    |
+| 2001                    |    34                    |
+| 2002                    |    12                    |
+| 2003                    |    34                    |
+| 2004                    |    44                    |
+| 2005                    |    51                    |
+| 2006                    |    97                    |
+| 2007                    |    0A                    |
+#### Manual Calculations
+
+(Add your calculation here)
+![WhatsApp Image 2025-09-22 at 08 50 10_fee9ee84](https://github.com/user-attachments/assets/d7c328ff-c3d2-49ca-9962-673fd52d7c88)
+
+
+## OUTPUT SCREEN FROM MASM SOFTWARE
+
+<img width="634" height="432" alt="image" src="https://github.com/user-attachments/assets/b01c8870-b248-4948-a2d4-965cc7bc669d" />
+
+---
 
 ## 4. DIVISION
 
@@ -280,6 +328,7 @@ END
    ## FLOWCHART
 <img width="1065" height="802" alt="image" src="https://github.com/user-attachments/assets/25b4a483-0d42-494b-8639-1af3ea17191b" />
 
+### DIRECT DIVISION
 
 #### Program
 
@@ -304,20 +353,61 @@ END
 
 | MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
 | ----------------------- | ------------------------ |
-|                         |                          |
-
+| 2000                    |    34                    |
+| 2001                    |    12                    |
+| 2002                    |    34                    |
+| 2003                    |    12                    |
+| 2004                    |    01                    |
+| 2005                    |    00                    |
 #### Manual Calculations
 
-(Add your calculation here)
-<img width="1160" height="560" alt="image" src="https://github.com/user-attachments/assets/9897ab9d-b1dd-4890-9998-9c18a7b3d2e1" />
+![WhatsApp Image 2025-09-22 at 09 08 52_77fac67d](https://github.com/user-attachments/assets/f4d3926e-f254-4bb1-946c-462b58481584)
 
 
----
 ## OUTPUT FROM MASM SOFTWARE
 <img width="628" height="427" alt="Screenshot 2025-09-21 223000" src="https://github.com/user-attachments/assets/2ec97a09-7f3e-4a27-8d83-4352d78d009b" />
 
+---
+
+### INDIRECT DIVISION
+
+## PROGRAM
+```
+CODE SEGMENT
+ASSUME CS: CODE,DS:CODE
+ORG 1000H
+MOV SI,2000H
+MOV DX,0000H
+MOV AX,[SI]
+MOV BX,[SI+02H]
+DIV BX
+MOV [SI+04H],AX
+MOV [SI+06H],DX
+MOV AH,4CH
+INT 21H
+CODE ENDS
+END
+```
+#### Output Table
+
+| MEMORY LOCATION (INPUT) | MEMORY LOCATION (OUTPUT) |
+| ----------------------- | ------------------------ |
+| 2000                    |    34                    |
+| 2001                    |    12                    |
+| 2002                    |    34                    |
+| 2003                    |    12                    |
+| 2004                    |    01                    |
+| 2005                    |    00                    |
+
+#### Manual Calculations
+
+![WhatsApp Image 2025-09-22 at 09 02 57_28f54b8b](https://github.com/user-attachments/assets/41284a32-0bfa-486e-a69f-e5333e97c30b)
 
 
+## OUTPUT FROM MASM SOFTWARE
+<img width="636" height="419" alt="indivScreenshot 2025-09-12 092150" src="https://github.com/user-attachments/assets/f4ed5384-ffcb-4b46-965e-44ca2fbb1d2f" />
+
+---
 ## RESULT
 
 Thus, the Assembly Language Programs for 8086 to perform arithmetic operations (Addition, Subtraction, Multiplication, and Division) using both direct and indirect methods were successfully written and executed using MASM.
